@@ -1,0 +1,159 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  /* background: #ffffff url('../img/geometry2.png'); */
+  /* Background pattern from Subtle Patterns */
+  font-family: 'Coda', cursive;
+  background-color: #778899;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+  width: 860px;
+  max-width: 130%;
+  /* min-height: 680px; */
+  background: #B0C4DE;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+}
+
+.deck .card {
+  height: 95px;
+  width: 95px;
+  background: #9400D3;
+  font-size: 0;
+  color: #808080;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #4B0082;
+  cursor: default;
+}
+
+.deck .card.show {
+  font-size: 33px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #483D8B;
+  font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+  text-align: left;
+  /* float: right; */
+  width: 625px;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.middle-box {
+  width: 660px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart, .score-panel .hint {
+  margin-left: 15px;
+  float: right;
+  cursor: pointer;
+}
+
+#deck {
+  padding: 32px;
+  /* margin-left: auto; */
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .deck .card {
+    height: 105px;
+    width: 105px;
+  }
+  #deck {
+    padding: 32px;
+    min-height: inherit;
+  }
+}
+
+@media (max-width: 487px) {
+  .deck .card {
+    height: 65px;
+    width: 65px;
+  }
+  #deck {
+    padding: 28px;
+    min-height: inherit;
+  }
+}
+
+@media (max-width: 320px) {
+  .deck .card {
+    height: 50px;
+    width: 50px;
+  }
+  #deck {
+    padding: 24px;
+    min-height: inherit;
+  }
+}
